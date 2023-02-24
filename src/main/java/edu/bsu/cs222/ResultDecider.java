@@ -12,7 +12,8 @@ public class ResultDecider {
             System.out.println("computer played " + computerPlay + ", you lose!");
         } else if (winCondition(userPlay, computerPlay)) {
             System.out.println("computer played " + computerPlay + ", you win!");
+        } else {
+            System.out.println("tie!");
         }
-        System.out.println("tie!");
     }
 }
