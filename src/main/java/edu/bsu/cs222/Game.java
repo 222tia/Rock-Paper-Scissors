@@ -17,7 +17,7 @@ public class Game {
             userScore = ScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
             computerScore = ScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
 
-            System.out.println("Your score is: " + userScore + "\nComputer score is:" + computerScore);
+            System.out.println("\nYour score is: " + userScore + "\nComputer score is: " + computerScore);
         }
     }
 }

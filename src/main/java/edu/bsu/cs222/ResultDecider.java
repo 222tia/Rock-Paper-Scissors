@@ -9,11 +9,11 @@ public class ResultDecider {
 
     public static void getResult(String userPlay, String computerPlay){
         if (winCondition(computerPlay, userPlay)) {
-            System.out.println("computer played " + computerPlay + ", you lose!");
+            System.out.println("\ncomputer played " + computerPlay + ", you lose!");
         } else if (winCondition(userPlay, computerPlay)) {
-            System.out.println("computer played " + computerPlay + ", you win!");
+            System.out.println("\ncomputer played " + computerPlay + ", you win!");
         } else {
-            System.out.println("computer played " + computerPlay + "tie!");
+            System.out.println("\ncomputer played " + computerPlay + ", tie!");
         }
     }
 }
