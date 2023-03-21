@@ -1,11 +1,23 @@
 package edu.bsu.cs222;
 
 public class Game {
-    private final static String userPlay = UserPlayReceiver.getUserPlay();
-    private final static String computerPlay = PlayRandomizer.getRandomPlay();
+
     public static void main(String[] args) {
 
-        ResultDecider.getResult(userPlay, computerPlay);
+        int userScore = 0;
+        int computerScore = 0;
 
+        while (userScore< 3 || computerScore < 3) {
+
+            String userPlay = UserPlayReceiver.getUserPlay();
+            String computerPlay = PlayRandomizer.getRandomPlay();
+
+            ResultDecider.getResult(userPlay, computerPlay);
+
+            userScore = ScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
+            computerScore = ScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
+
+            System.out.println("Your score is: " + userScore + "\nComputer score is:" + computerScore);
+        }
     }
 }
