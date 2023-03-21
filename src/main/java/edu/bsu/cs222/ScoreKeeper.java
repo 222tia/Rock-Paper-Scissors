@@ -2,10 +2,17 @@ package edu.bsu.cs222;
 
 public class ScoreKeeper {
 
-    public static int addScore(String computerPlay, String userPlay, int userScore){
+    public static int addUserScore(String computerPlay, String userPlay, int score){
         if (ResultDecider.winCondition(userPlay, computerPlay)) {
-            userScore+=1;
+            score+=1;
         }
-        return userScore;
+        return score;
+    }
+
+    public static int addComputerScore(String computerPlay, String userPlay, int score){
+        if (ResultDecider.winCondition(computerPlay, userPlay)) {
+            score+=1;
+        }
+        return score;
     }
 }
