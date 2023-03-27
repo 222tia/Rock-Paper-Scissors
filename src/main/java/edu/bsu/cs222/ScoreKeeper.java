@@ -15,4 +15,9 @@ public class ScoreKeeper {
         }
         return score;
     }
+
+    public static Boolean checkScore(int winningScore, int losingScore){
+        return (winningScore == 2) && (losingScore == 0) ||
+                (winningScore == 3) && (losingScore <= 2);
+    }
 }

@@ -9,15 +9,19 @@ public class Game {
 
         while (userScore< 3 || computerScore < 3) {
 
+            System.out.println("\nrock, paper, or scissors?: ");
+
             String userPlay = UserPlayReceiver.getUserPlay();
             String computerPlay = PlayRandomizer.getRandomPlay();
 
-            ResultDecider.getResult(userPlay, computerPlay);
+            ResultDecider.getRoundResult(userPlay, computerPlay);
 
             userScore = ScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
             computerScore = ScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
 
             System.out.println("\nYour score is: " + userScore + "\nComputer score is: " + computerScore);
+
+            ResultDecider.getGameResult(userScore, computerScore);
         }
     }
 }
