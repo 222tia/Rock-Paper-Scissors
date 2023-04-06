@@ -6,22 +6,28 @@ public class Game {
 
         int userScore = 0;
         int computerScore = 0;
+        int round = 1;
+
+        Dialogue.welcomeMessage();
 
         while (userScore< 3 || computerScore < 3) {
 
-            System.out.println("\nrock, paper, or scissors?: ");
+            Dialogue.showRound(round);
+            Dialogue.userPlayPrompt();
 
             String userPlay = UserPlayReceiver.getUserPlay();
             String computerPlay = PlayRandomizer.getRandomPlay();
 
-            ResultDecider.getRoundResult(userPlay, computerPlay);
+            Dialogue.showRoundResult(userPlay, computerPlay);
 
             userScore = ScoreKeeper.addUserScore(computerPlay, userPlay, userScore);
             computerScore = ScoreKeeper.addComputerScore(computerPlay, userPlay, computerScore);
 
-            System.out.println("\nYour score is: " + userScore + "\nComputer score is: " + computerScore);
+            Dialogue.showScore(userScore, computerScore);
+            Dialogue.showGameResult(userScore, computerScore);
 
-            ResultDecider.getGameResult(userScore, computerScore);
+            round+=1;
+
         }
     }
 }
