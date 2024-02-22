@@ -1,8 +1,8 @@
-package edu.bsu.cs222;
+package rock_paper_scissors;
 
 import java.util.Scanner;
 
-public class UserPlayReceiver {
+public class PlayReceiver {
     public static String getUserPlay() {
         Scanner userPlayScanner = new Scanner(System.in);
         String userPlay = userPlayScanner.nextLine().toLowerCase();

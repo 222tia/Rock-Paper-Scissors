@@ -1,12 +1,12 @@
-package edu.bsu.cs22;
+package edu.bsu.tia;
 
-import edu.bsu.cs222.UserPlayReceiver;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import rock_paper_scissors.PlayReceiver;
 
 import java.io.ByteArrayInputStream;
 
-public class TestUserPlayReceiver extends UserPlayReceiver {
+public class TestPlayReceiver extends PlayReceiver {
     @Test
     public void testUserPlaysScissors(){
         final String input = "scissors";

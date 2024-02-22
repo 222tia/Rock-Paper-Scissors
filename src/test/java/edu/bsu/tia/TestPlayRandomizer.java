@@ -1,8 +1,8 @@
-package edu.bsu.cs22;
+package edu.bsu.tia;
 
-import edu.bsu.cs222.PlayRandomizer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import rock_paper_scissors.PlayRandomizer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

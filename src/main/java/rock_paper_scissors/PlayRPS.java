@@ -1,6 +1,6 @@
-package edu.bsu.cs222;
+package rock_paper_scissors;
 
-public class Game {
+public class PlayRPS {
 
     public static void main(String[] args) {
 
@@ -15,7 +15,7 @@ public class Game {
             Dialogue.showRound(round);
             Dialogue.userPlayPrompt();
 
-            String userPlay = UserPlayReceiver.getUserPlay();
+            String userPlay = PlayReceiver.getUserPlay();
             String computerPlay = PlayRandomizer.getRandomPlay();
 
             Dialogue.showRoundResult(userPlay, computerPlay);

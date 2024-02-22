@@ -1,6 +1,6 @@
-package edu.bsu.cs222;
+package rock_paper_scissors;
 
-public class Dialogue extends ResultDecider{
+public class Dialogue extends ResultDecider {
 
     public static void welcomeMessage(){
         System.out.println("""

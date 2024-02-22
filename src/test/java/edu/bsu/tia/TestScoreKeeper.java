@@ -1,8 +1,8 @@
-package edu.bsu.cs22;
+package edu.bsu.tia;
 
-import edu.bsu.cs222.ScoreKeeper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import rock_paper_scissors.ScoreKeeper;
 
 public class TestScoreKeeper {
 
