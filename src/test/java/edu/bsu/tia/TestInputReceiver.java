@@ -2,11 +2,11 @@ package edu.bsu.tia;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import rock_paper_scissors.PlayReceiver;
+import rock_paper_scissors.InputReceiver;
 
 import java.io.ByteArrayInputStream;
 
-public class TestPlayReceiver extends PlayReceiver {
+public class TestInputReceiver extends InputReceiver {
     @Test
     public void testUserPlaysScissors(){
         final String input = "scissors";

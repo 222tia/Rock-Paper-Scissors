@@ -2,11 +2,21 @@ package rock_paper_scissors;
 
 public class Dialogue extends ResultDecider {
 
-    public static void welcomeMessage(){
+    public static void showWelcomeMessage(){
         System.out.println("""
                 Rock, Paper, Scissors is a two player game where each simultaneously throws the shape
-                of a rock, paper, or scissors with their hand. In this version, you will play against
-                an AI to best of three.
+                of a rock, paper, or scissors with their hand. In this version, you will play through
+                the terminal to a best of three.
+                
+                A) singleplayer
+                B) multiplayer
+                
+                Type 'A' or 'B' to select a mode:""");
+    }
+
+    public static void showRules(String mode){
+        System.out.println("\n\n\n" + mode + " SELECTED");
+        System.out.println("""
                 
                 The winner of the round is determined by these rules:
                 1. Rock beats Scissors
@@ -14,7 +24,7 @@ public class Dialogue extends ResultDecider {
                 3. Scissors beats Paper
                 """);
     }
-    public static void userPlayPrompt() {
+    public static void showUserPlayPrompt() {
         System.out.println("\nrock, paper, or scissors?: ");
     }
 

@@ -4,18 +4,31 @@ public class PlayRPS {
 
     public static void main(String[] args) {
 
+        Dialogue.showWelcomeMessage();
+
+        String modeSelection = InputReceiver.getModeSelection();
+
+        if (modeSelection.equals("a")) {
+            playSingleplayer();
+        } else {
+            playMultiplayer();
+        }
+
+    }
+
+    public static void playSingleplayer() {
         int userScore = 0;
         int computerScore = 0;
         int round = 1;
 
-        Dialogue.welcomeMessage();
+        Dialogue.showRules("SINGLEPLAYER");
 
         while (userScore< 3 || computerScore < 3) {
 
             Dialogue.showRound(round);
-            Dialogue.userPlayPrompt();
+            Dialogue.showUserPlayPrompt();
 
-            String userPlay = PlayReceiver.getUserPlay();
+            String userPlay = InputReceiver.getUserPlay();
             String computerPlay = PlayRandomizer.getRandomPlay();
 
             Dialogue.showRoundResult(userPlay, computerPlay);
@@ -29,5 +42,8 @@ public class PlayRPS {
             round+=1;
 
         }
+    }
+
+    private static void playMultiplayer() {
     }
 }
